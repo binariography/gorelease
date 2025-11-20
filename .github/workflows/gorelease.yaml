@@ -20,6 +20,14 @@ jobs:
       -
         name: Set up Go
         uses: actions/setup-go@v5
+      - 
+        name: Publish Release Notes
+        uses: release-drafter/release-drafter@v5.16.2
+        with:
+          version: ${{ github.event.release.tag_name }}
+          publish: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       -
         name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v6
