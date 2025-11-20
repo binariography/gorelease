@@ -24,7 +24,7 @@ jobs:
         name: Publish Release Notes
         uses: release-drafter/release-drafter@v5.16.2
         with:
-          version: ${{ github.event.release.tag_name }}
+          version: v${{ github.event.release.tag_name }}
           publish: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -36,7 +36,7 @@ jobs:
           distribution: goreleaser
           # 'latest', 'nightly', or a semver
           version: latest
-          args: release --skip=validate
+          args: release --skip=validate --clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Your GoReleaser Pro key, if you are using the 'goreleaser-pro' distribution
