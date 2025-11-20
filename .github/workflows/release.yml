@@ -5,8 +5,8 @@ on:
     types: [created, published, released]
 
 permissions:
-    contents: write
-    packages: write
+  contents: write
+  packages: write
 
 jobs:
   release-linux-amd64:
