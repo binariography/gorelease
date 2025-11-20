@@ -24,7 +24,7 @@ type Bucket struct {
 
 func main() {
 	appStartTime := time.Now()
-	start("http://localhost:8082/info")
+	start("http://localhost:8012/info")
 	fmt.Printf("it took %v seconds to run the app\n", time.Since(appStartTime).Seconds())
 	fmt.Printf("The number of times it errored %v \n", ERRORS)
 }
