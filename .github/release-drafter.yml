@@ -15,7 +15,7 @@ categories:
       - 'chore'
       - 'documentation'
 version-resolver:
-  default: minor
+  default: patch
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 template: |
   ## Changes
